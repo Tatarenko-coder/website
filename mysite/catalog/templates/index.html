@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home{% endblock %}</title>
+    {% load static %}
+    <script src="https://kit.fontawesome.com/8c1a66619e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/blog-solid.ico' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="header">
+    <h1>Welcome my web project</h1>
+</div>
+{% block content %}{% endblock%}
+<h3>Ласкаво прошу, це простий веб-сайт, написаний на Django.</h3>
+   {% block home%}{% endblock%}
+    <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fa-regular fa-eject"></i>
+                        <h3>About</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Hello<br> Мене звати Дмитро Татаренко.</p>
+                        <a href="{% url 'about' %}" type="button">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fa-regular fa-diagram-project"></i>
+                        <h3>Project</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> Мої проекти</p>
+                        <a href="{% url 'project' %}" type="button">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fa-regular fa-address-card"></i>
+                        <h3>Contact</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Мої контакти</p>
+                        <a href="{% url 'contact' %}" type="button">Read More</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+<footer class="footer">
+    {% block footer %}
+        <div id="footer">
+                <a href="https://www.instagram.com/d__tatarenko/">
+                    <i class="fa-brands fa-instagram"></i></a>
+
+                <a href="https://github.com/Tatarenko-coder">
+                    <i class="fa-brands fa-github"></i></a>
+
+            <h5>Copyright T.D. </h5>
+        </div>
+    {% endblock %}
+</footer>
+
+<script>
+    var close_open = false;
+    $( ".drop_down" ).click(function() {
+        if(close_open == false){
+            $( ".drop_down ul" ).removeClass("close").addClass("open");
+            close_open=true;
+        }
+        else{
+            $( ".drop_down ul" ).removeClass("open").addClass("close");
+            close_open=false;
+        }
+    });
+
+    $( "body" ).click(function(){
+        $( ".drop_down ul" ).removeClass("open").addClass("close");
+        close_open=false;
+    });
+
+</script>
+</body>
+</html>

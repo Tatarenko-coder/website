@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+html{
+    background: linear-gradient(to right, #bdc3c7 0%, #445463 100%);
+}
+*{
+        padding: 0;
+        margin: 0;
+    }
+h1{
+        font-size: 44px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 19px;
+    }
+    h5{
+        font-size: 14px;
+    }
+    h6{
+        font-size: 12px;
+    }
+
+body{
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    text-shadow: 0 2px 1px rgb(68, 84, 99);
+    padding: 8px 8px;
+    margin: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.container{
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    padding-left: 10px;
+    scroll-padding-right: 40px;
+}
+.card{
+    position: relative;
+    padding: 18px 18px;
+}
+.face{
+    width:350px;
+    height: 200px;
+    transition:.4s;
+}
+.face1{
+    position: relative;
+    background: linear-gradient(to top, #bdc3c7 -80%, #445463 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgb(68, 84, 99);
+}
+.face2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #bdc3c7;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgb(68, 84, 99);
+    transform: translateY(-100px);
+    border-radius: 18px;
+}
+.card:hover .face.face1{
+    transform: translateY(0);
+}
+.card .face.face1 .content{
+    opacity: 0.6;
+    transition:  0.5s;
+    text-align: center;
+}
+.card .face.face1 .content i{
+    color: white;
+    display: inline-block;
+}
+
+.card:hover .face.face2{
+    transform: translateY(0);
+}
+.card .face.face2 .content p, a{
+    opacity: 0.9;
+    transition:  0.5s;
+    text-align: center;
+    color: #000000;
+}
+.card .face.face2 .content a{
+    text-decoration:none;
+    font-size: 13px;
+    color: black;
+    box-sizing: border-box;
+    outline : 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+}
+.container .card .face.face2 .content a:hover{
+  background: #333 ;
+  color: whitesmoke;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+.footer i {
+    font-size: 28px;
+    margin: 10px;
+    }
+.certificate img{
+    width: 30%;
+    border-radius: 20px;
+     box-shadow: 0 10px 20px rgb(68, 84, 99);
+
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+
+    padding: 10px 10px;
+}
+ul,li{
+    list-style: none;
+}
+#gallery img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgb(68, 84, 99);
+}
+.containeri{
+    border: #9147e0 solid 1px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    height: 400px;
+    border-radius: 20px;
+}
+#gallery{
+
+}
+.photo{
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.home{
+    width: 100px;
+    height: 40px;
+    border-radius: 12px;
+    margin: 5px 5px;
+    border: none;
+    background: linear-gradient(to top, #bdc3c7 -80%, #445463 100%);
+    box-shadow:
+            2px 2px 12px 0 rgb(189, 195, 199),
+            -2px -2px 12px 0 rgb(68, 84, 99);
+}
+.home a{
+    text-decoration:none;
+    font-size: 13px;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+.home:hover {
+    background: rgba(70, 81, 101, 0.59);
+    background: linear-gradient(0deg, rgb(68, 84, 99)100%, rgb(189, 195, 199) -40%);
+}
